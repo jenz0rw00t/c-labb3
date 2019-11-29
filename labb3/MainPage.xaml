@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="labb3.MainPage">
+    <Grid Padding="30, 40, 30, 20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Grid.Row="0"
+                     Grid.Column="0"
+                     Grid.ColumnSpan="3"
+                     HorizontalOptions="Center" >
+            <Label Text="Inmatat Belopp:" />
+            <Label x:Name="enteredAmountOutput"
+                   Text="0.00 SEK"
+                   HorizontalOptions="Center" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="1"
+                     Grid.Column="0"
+                     Grid.ColumnSpan="3"
+                     HorizontalOptions="Center" >
+            <Label Text="Momssats:" />
+            <Label x:Name="vatRateOutput"
+                   Text="0%"
+                   HorizontalOptions="Center" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="2"
+                     Grid.Column="0" >
+            <Label Text="Uträknat Belopp:" />
+            <Label x:Name="calculatedAmountOutput"
+                   Text="0.00 SEK" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="2"
+                     Grid.Column="2" >
+            <Label Text="Uträknat Moms:" />
+            <Label x:Name="calculatedVatOutput"
+                   Text="0.00 SEK" />
+        </StackLayout>
+
+        <Entry x:Name="amountInput"
+               Grid.Row="3"
+               Grid.Column="0"
+               Grid.ColumnSpan="3"
+               Placeholder="Skriv ett belopp inklusive moms..."
+               Keyboard="Numeric"
+               VerticalOptions="End" />
+
+        <Button x:Name="eightButton"
+                Grid.Row="4"
+                Grid.Column="0"
+                Text="8%" />
+        <Button x:Name="twelveButton"
+                Grid.Row="4"
+                Grid.Column="1"
+                Text="12%" />
+        <Button x:Name="twentyFiveButton"
+                Grid.Row="4"
+                Grid.Column="2"
+                Text="25%" />
+
+    </Grid>
+</ContentPage>
